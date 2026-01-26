@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@keyframes scroll{
+  0% {
+        transform: translate(0);
+  }
+  100%{
+        transform: translate(-50%);
+  }
+}
+.animate-scroll{
+  animation: scroll 20s linear infinite;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.hero{
+  background-color: #1f8f4a;
+  position : relative;
+  overflow: hidden;
+}
+
+.hero::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:  url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+ opacity: 0.85;
+  
+}
+.context-text{
+  color: #ADADAD;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+body {
+  background-color: #ffffff;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
