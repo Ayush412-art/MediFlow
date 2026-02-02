@@ -1,16 +1,22 @@
 
 import Image from "next/image";
 import Sponcers from "./components/Sponcers";
+import Navbar from "./components/Navbar";
+import { poppins , inter } from "./layout";
+
+
 export default function Home() {
   return (
     <main>
-      <div className="hero w-full h-[550px] flex flex-col justify-center items-center text-white px-6 text-center">
+      <Navbar />
+
+      <div id="home" className="hero w-full h-[550px] flex flex-col justify-center items-center text-white px-6 text-center">
         
-        <p className="px-3 py-3 rounded-full  bg-orange-500 shadow-2xl text-sm md:text-base uppercase tracking-wide opacity-90">
+        <p className={`px-3 py-3 rounded-full  bg-orange-500 shadow-2xl font-bold text-sm md:text-lg uppercase tracking-wide opacity-90`}>
           Get your instant checkup now
         </p>
 
-        <h1 className="mt-4 text-3xl md:text-5xl font-bold leading-tight">
+        <h1 className={`mt-4 text-3xl md:text-5xl font-bold ${poppins.className}  leading-tight`}>
           Smart Health Checkup <br />
           & Doctor's Appointment
         </h1>
@@ -35,8 +41,52 @@ export default function Home() {
       </div>
 
       {/*Medical brands sponcers*/}
-
         <Sponcers />
+
+       <section className="bg-[#4A7766] px-6 lg:px-12 xl:px-[8%] py-16">
+     <div className="flex flex-col lg:flex-row items-center gap-10">
+    <div className="flex-1">
+      <Image
+        className="rounded-xl shadow-2xl w-full max-w-lg mx-auto"
+        src="/images/dash.png"
+        alt="dashboard preview"
+        height={600}
+        width={600}
+        priority
+      />
+    </div>
+
+    <div className="flex-1 text-white text-center lg:text-left">
+
+      <h2 className={`text-3xl lg:text-4xl  font-semibold leading-tight mb-4 `}>
+        Instant Symptom Guidance & 🩺 Verified Doctor Appointments
+      </h2>
+
+      <p className={`text-base lg:text-lg ${inter.className} text-white/90 leading-relaxed max-w-xl mx-auto lg:mx-0`}>
+        💬 Give your symptoms details and ask for quick action 
+      </p>
+        <p className={`text-base lg:text-lg ${inter.className} text-white/90 leading-relaxed max-w-xl mx-auto lg:mx-0`}>
+          ⚡Quick LLM solution on patient's health condition with face to face doctor's consult.
+      </p>
+       <p className={`text-base lg:text-lg ${inter.className} text-white/90 leading-relaxed max-w-xl mx-auto lg:mx-0`}>
+         📅 Book verified doctor appointments effortlessly with{" "}
+        <strong className="font-semibold text-white">MediFlow</strong>.
+      </p>
+
+      <div className="mt-3 lg:mt-5 ">
+              <ul className="steps">
+        <li className="step step-primary">Register</li>
+        <li className="step step-primary">Choose plan</li>
+        <li className="step">Purchase</li>
+        <li className="step">Receive Product</li>
+      </ul>
+      </div>
+  
+    </div>
+
+        
+  </div>
+</section>
 
 
     </main>
