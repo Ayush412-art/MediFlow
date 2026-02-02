@@ -43,11 +43,13 @@ export default function Home() {
       {/*Medical brands sponcers*/}
         <Sponcers />
 
-       <section className="bg-[#4A7766] px-6 lg:px-12 xl:px-[8%] py-16">
-     <div className="flex flex-col lg:flex-row items-center gap-10">
-    <div className="flex-1">
+   <section className="bg-[#4A7766] min-h-screen flex items-center px-6 lg:px-12 xl:px-[8%] py-16">
+  <div className="flex flex-col lg:flex-row items-center gap-12 w-full">
+
+    {/* LEFT: IMAGE */}
+    <div className="flex-1 flex justify-center lg:justify-start">
       <Image
-        className="rounded-xl shadow-2xl w-full max-w-lg mx-auto"
+        className="rounded-xl shadow-2xl w-full max-w-lg"
         src="/images/dash.png"
         alt="dashboard preview"
         height={600}
@@ -56,38 +58,83 @@ export default function Home() {
       />
     </div>
 
+    {/* RIGHT: TEXT */}
     <div className="flex-1 text-white text-center lg:text-left">
-
-      <h2 className={`text-3xl lg:text-4xl  font-semibold leading-tight mb-4 `}>
+      <h2 className="text-3xl lg:text-4xl font-semibold leading-tight mb-6">
         Instant Symptom Guidance & 🩺 Verified Doctor Appointments
       </h2>
 
+      <p className={`text-base lg:text-lg ${inter.className} text-white/90 leading-relaxed mb-3 max-w-xl mx-auto lg:mx-0`}>
+        💬 Give your symptom details and ask for quick action.
+      </p>
+
+      <p className={`text-base lg:text-lg ${inter.className} text-white/90 leading-relaxed mb-3 max-w-xl mx-auto lg:mx-0`}>
+        ⚡ Quick LLM solutions combined with face-to-face doctor consultations.
+      </p>
+
       <p className={`text-base lg:text-lg ${inter.className} text-white/90 leading-relaxed max-w-xl mx-auto lg:mx-0`}>
-        💬 Give your symptoms details and ask for quick action 
-      </p>
-        <p className={`text-base lg:text-lg ${inter.className} text-white/90 leading-relaxed max-w-xl mx-auto lg:mx-0`}>
-          ⚡Quick LLM solution on patient's health condition with face to face doctor's consult.
-      </p>
-       <p className={`text-base lg:text-lg ${inter.className} text-white/90 leading-relaxed max-w-xl mx-auto lg:mx-0`}>
-         📅 Book verified doctor appointments effortlessly with{" "}
+        📅 Book verified doctor appointments effortlessly with{" "}
         <strong className="font-semibold text-white">MediFlow</strong>.
       </p>
 
-      <div className="mt-3 lg:mt-5 ">
-              <ul className="steps">
-        <li className="step step-primary">Register</li>
-        <li className="step step-primary">Choose plan</li>
-        <li className="step">Purchase</li>
-        <li className="step">Receive Product</li>
-      </ul>
+      {/* STEPS */}
+      <div className="mt-8 flex justify-center lg:justify-start">
+        <ul className="steps steps-vertical lg:steps-horizontal">
+          <li className="step step-primary">Register</li>
+          <li className="step step-primary">Ask symptoms</li>
+          <li className="step">Get instant solution</li>
+          <li className="step">Follow treatment</li>
+        </ul>
       </div>
-  
     </div>
 
-        
   </div>
 </section>
 
+<section className="bg-[#c3BAA7] text-[#174E4F] min-h-screen flex items-center px-6 lg:px-12 xl:px-[8%] py-16">
+  <div className="flex flex-col-reverse lg:flex-row items-center gap-12 w-full">
+
+
+    <div className="flex-1 text-center lg:text-left">
+      <h2 className="text-3xl lg:text-4xl font-semibold leading-tight mb-6">
+        Indepth medical report analysis 📃 & Treatment guidance 🧮
+      </h2>
+
+      <p className={`text-base lg:text-lg ${inter.className} leading-relaxed mb-3 max-w-xl mx-auto lg:mx-0`}>
+        🤖 LLM based graphical report analysis 
+      </p>
+
+      <p className={`text-base lg:text-lg ${inter.className} leading-relaxed mb-3 max-w-xl mx-auto lg:mx-0`}>
+        ⚡Custom chatroom for depth question & answer discussion on reports 
+      </p>
+
+      <p className={`text-base lg:text-lg ${inter.className} leading-relaxed max-w-xl mx-auto lg:mx-0`}>
+        📅 Downloadable & sharable reports in PDF format 
+        
+      </p>
+
+    </div>
+
+  
+    <div className="flex-1 flex justify-center lg:justify-end">
+      <Image
+        className="rounded-xl shadow-2xl w-full max-w-lg"
+        src="/images/dash.png"
+        alt="dashboard preview"
+        height={600}
+        width={600}
+        priority
+      />
+    </div>
+
+  </div>
+</section>
+
+{/* Feedback section */}
+
+    <section>
+      
+    </section>
 
     </main>
   );
